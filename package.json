@@ -1,6 +1,6 @@
 {
   "name": "@nodestrap/card",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "A flexible and extensible content container, with optional header/footer, themes, many display variants, and more.",
   "type": "module",
   "main": "dist/Card.jsx",
