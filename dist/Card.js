@@ -315,57 +315,52 @@ export function Card(props) {
         setRef(bodyRef, null);
     if (!React.Children.count(footer))
         setRef(footerRef, null);
-    return (<Indicator 
-    // other props:
-    {...restProps} 
-    // semantics:
-    semanticTag={props.semanticTag ?? 'article'} semanticRole={props.semanticRole ?? 'article'} aria-orientation={props['aria-orientation'] ?? (orientationHorizontal ? 'horizontal' : 'vertical')} 
-    // classes:
-    mainClass={props.mainClass ?? sheet.main} variantClasses={[...(props.variantClasses ?? []),
+    return (React.createElement(Indicator, { ...restProps, 
+        // semantics:
+        semanticTag: props.semanticTag ?? 'article', semanticRole: props.semanticRole ?? 'article', "aria-orientation": props['aria-orientation'] ?? (orientationHorizontal ? 'horizontal' : 'vertical'), 
+        // classes:
+        mainClass: props.mainClass ?? sheet.main, variantClasses: [...(props.variantClasses ?? []),
             orientationVariant.class,
             cardVariant.class,
-        ]}>
-            {header && <Element 
+        ] },
+        header && React.createElement(Element
         // essentials:
-        elmRef={headerRef} 
-        // semantics:
-        tag={headerTag ?? 'header'} role={headerRole} semanticTag={headerSemanticTag} semanticRole={headerSemanticRole} 
-        // classes:
-        mainClass={headerMainClass} classes={[...(headerClasses ?? []),
+        , { 
+            // essentials:
+            elmRef: headerRef, 
+            // semantics:
+            tag: headerTag ?? 'header', role: headerRole, semanticTag: headerSemanticTag, semanticRole: headerSemanticRole, 
+            // classes:
+            mainClass: headerMainClass, classes: [...(headerClasses ?? []),
                 'header',
-            ]} variantClasses={headerVariantClasses} stateClasses={headerStateClasses} 
-        // styles:
-        style={headerStyle}>
-                {header}
-            </Element>}
-            
-            {children && <Element 
+            ], variantClasses: headerVariantClasses, stateClasses: headerStateClasses, 
+            // styles:
+            style: headerStyle }, header),
+        children && React.createElement(Element
         // essentials:
-        elmRef={bodyRef} 
-        // semantics:
-        tag={bodyTag} role={bodyRole} semanticTag={bodySemanticTag} semanticRole={bodySemanticRole} 
-        // classes:
-        mainClass={bodyMainClass} classes={[...(bodyClasses ?? []),
+        , { 
+            // essentials:
+            elmRef: bodyRef, 
+            // semantics:
+            tag: bodyTag, role: bodyRole, semanticTag: bodySemanticTag, semanticRole: bodySemanticRole, 
+            // classes:
+            mainClass: bodyMainClass, classes: [...(bodyClasses ?? []),
                 'body',
-            ]} variantClasses={bodyVariantClasses} stateClasses={bodyStateClasses} 
-        // styles:
-        style={bodyStyle}>
-                {children}
-            </Element>}
-            
-            {footer && <Element 
+            ], variantClasses: bodyVariantClasses, stateClasses: bodyStateClasses, 
+            // styles:
+            style: bodyStyle }, children),
+        footer && React.createElement(Element
         // essentials:
-        elmRef={footerRef} 
-        // semantics:
-        tag={footerTag ?? 'footer'} role={footerRole} semanticTag={footerSemanticTag} semanticRole={footerSemanticRole} 
-        // classes:
-        mainClass={footerMainClass} classes={[...(footerClasses ?? []),
+        , { 
+            // essentials:
+            elmRef: footerRef, 
+            // semantics:
+            tag: footerTag ?? 'footer', role: footerRole, semanticTag: footerSemanticTag, semanticRole: footerSemanticRole, 
+            // classes:
+            mainClass: footerMainClass, classes: [...(footerClasses ?? []),
                 'footer',
-            ]} variantClasses={footerVariantClasses} stateClasses={footerStateClasses} 
-        // styles:
-        style={footerStyle}>
-                {footer}
-            </Element>}
-        </Indicator>);
+            ], variantClasses: footerVariantClasses, stateClasses: footerStateClasses, 
+            // styles:
+            style: footerStyle }, footer)));
 }
 export { Card as default };
