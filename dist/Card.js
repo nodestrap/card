@@ -278,7 +278,7 @@ export const useCardSheet = createUseSheet(() => [
             usesCardStates(),
         ]),
     ]),
-]);
+], /*sheetId :*/ 'wfc3nwgtcn'); // an unique salt for SSR support, ensures the server-side & client-side have the same generated class names
 // configs:
 export const [cssProps, cssDecls, cssVals, cssConfig] = createCssConfig(() => {
     return {
