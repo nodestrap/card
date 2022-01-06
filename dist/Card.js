@@ -30,7 +30,8 @@ import {
 usesIndicatorLayout, usesIndicatorVariants, usesIndicatorStates, Indicator, } from '@nodestrap/indicator';
 import { 
 // hooks:
-usesBorderAsContainer, usesBorderAsSeparatorBlock, usesBorderAsSeparatorInline, 
+usesBorderAsContainer, usesBorderAsSeparatorBlock, usesBorderAsSeparatorInline, } from '@nodestrap/container';
+import { 
 // styles:
 usesContentMedia, usesContentLayout, usesContentVariants, } from '@nodestrap/content';
 // hooks:
@@ -188,7 +189,7 @@ export const usesCardLayout = (options) => {
                     ...children([headerElm, footerElm, bodyElm], [
                         imports([
                             // borders:
-                            usesBorderAsSeparatorBlock({ replaceLast: true }),
+                            usesBorderAsSeparatorBlock({ swapFirstItem: true }),
                         ]),
                     ]),
                 }),
@@ -202,7 +203,7 @@ export const usesCardLayout = (options) => {
                     ...children([headerElm, footerElm, bodyElm], [
                         imports([
                             // borders:
-                            usesBorderAsSeparatorInline({ replaceLast: true }),
+                            usesBorderAsSeparatorInline({ swapFirstItem: true }),
                         ]),
                     ]),
                 }),
