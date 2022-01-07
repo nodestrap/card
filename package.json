@@ -1,6 +1,6 @@
 {
   "name": "@nodestrap/card",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "A flexible and extensible content container, with optional header/footer, themes, many display variants, and more.",
   "type": "module",
   "main": "dist/Card.js",
@@ -33,8 +33,8 @@
     "@cssfn/react-cssfn": "^1.0.10",
     "@cssfn/types": "^1.0.3",
     "@nodestrap/basic": "^4.0.5",
-    "@nodestrap/container": "^4.0.7",
-    "@nodestrap/content": "^4.0.6",
+    "@nodestrap/container": "^4.0.8",
+    "@nodestrap/content": "^4.0.7",
     "@nodestrap/element": "^4.0.5",
     "@nodestrap/indicator": "^4.0.5",
     "@nodestrap/stripouts": "^4.0.1",

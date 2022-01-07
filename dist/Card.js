@@ -33,7 +33,7 @@ import {
 usesBorderAsContainer, usesBorderAsSeparatorBlock, usesBorderAsSeparatorInline, } from '@nodestrap/container';
 import { 
 // styles:
-usesContentMedia, usesContentLayout, usesContentVariants, } from '@nodestrap/content';
+usesContentLayout, usesContentVariants, usesContentChildren, } from '@nodestrap/content';
 // hooks:
 // layouts:
 export const defaultOrientationRuleOptions = defaultBlockOrientationRuleOptions;
@@ -145,10 +145,10 @@ export const usesCardLayout = (options) => {
             // children:
             ...children([headerElm, footerElm, bodyElm], [
                 imports([
-                    // media:
-                    usesContentMedia(),
                     // layouts:
                     usesCardItemLayout(),
+                    // children:
+                    usesContentChildren(),
                 ]),
             ]),
             ...children([headerElm, footerElm], [
@@ -189,7 +189,7 @@ export const usesCardLayout = (options) => {
                     ...children([headerElm, footerElm, bodyElm], [
                         imports([
                             // borders:
-                            usesBorderAsSeparatorBlock({ swapFirstItem: true }),
+                            usesBorderAsSeparatorBlock({ swapFirstItem: true }), // must be placed at the last
                         ]),
                     ]),
                 }),
@@ -203,7 +203,7 @@ export const usesCardLayout = (options) => {
                     ...children([headerElm, footerElm, bodyElm], [
                         imports([
                             // borders:
-                            usesBorderAsSeparatorInline({ swapFirstItem: true }),
+                            usesBorderAsSeparatorInline({ swapFirstItem: true }), // must be placed at the last
                         ]),
                     ]),
                 }),
