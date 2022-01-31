@@ -11,14 +11,14 @@ export interface CardVariant {
 export declare const useCardVariant: (props: CardVariant) => {
     class: CardStyle | null;
 };
-export declare const usesCardItemLayout: () => import("@cssfn/cssfn").StyleCollection;
-export declare const usesCardCaptionLayout: () => import("@cssfn/cssfn").StyleCollection;
-export declare const usesCardHeaderLayout: () => import("@cssfn/cssfn").StyleCollection;
-export declare const usesCardFooterLayout: () => import("@cssfn/cssfn").StyleCollection;
-export declare const usesCardBodyLayout: () => import("@cssfn/cssfn").StyleCollection;
-export declare const usesCardLayout: (options?: OrientationRuleOptions | undefined) => import("@cssfn/cssfn").StyleCollection;
-export declare const usesCardVariants: () => import("@cssfn/cssfn").StyleCollection;
-export declare const usesCardStates: () => import("@cssfn/cssfn").StyleCollection;
+export declare const usesCardItemLayout: () => import("@cssfn/cssfn").Rule;
+export declare const usesCardCaptionLayout: () => import("@cssfn/cssfn").Rule;
+export declare const usesCardHeaderLayout: () => import("@cssfn/cssfn").Rule;
+export declare const usesCardFooterLayout: () => import("@cssfn/cssfn").Rule;
+export declare const usesCardBodyLayout: () => import("@cssfn/cssfn").Rule;
+export declare const usesCardLayout: (options?: OrientationRuleOptions | undefined) => import("@cssfn/cssfn").Rule;
+export declare const usesCardVariants: () => import("@cssfn/cssfn").Rule;
+export declare const usesCardStates: () => import("@cssfn/cssfn").Rule;
 export declare const useCardSheet: import("@cssfn/types").Factory<import("jss").Classes<"main">>;
 export declare const cssProps: import("@cssfn/css-config").Refs<{
     boxSizing: string;
