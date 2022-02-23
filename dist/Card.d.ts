@@ -24,17 +24,17 @@ export declare const cssProps: import("@cssfn/css-config").Refs<{
     boxSizing: string;
     blockSize: string;
     captionFilter: string[][];
-    wordWrap: string;
+    overflowWrap: string;
 }>, cssDecls: import("@cssfn/css-config").Decls<{
     boxSizing: string;
     blockSize: string;
     captionFilter: string[][];
-    wordWrap: string;
+    overflowWrap: string;
 }>, cssVals: import("@cssfn/css-config").Vals<{
     boxSizing: string;
     blockSize: string;
     captionFilter: string[][];
-    wordWrap: string;
+    overflowWrap: string;
 }>, cssConfig: import("@cssfn/css-config").CssConfigSettings;
 export interface CardProps<TElement extends HTMLElement = HTMLElement> extends IndicatorProps<TElement>, OrientationVariant, CardVariant {
     headerStyle?: React.CSSProperties;

@@ -273,7 +273,7 @@ export const [cssProps, cssDecls, cssVals, cssConfig] = createCssConfig(() => {
         // captions:
         captionFilter: [['brightness(70%)', 'contrast(140%)']],
         // typos:
-        wordWrap: 'break-word',
+        overflowWrap: 'break-word', // prevents a long word from breaking Card layout
     };
 }, { prefix: 'crd' });
 export function Card(props) {
